@@ -333,11 +333,15 @@ for i in range(8):
         print(" %"*4)
 
 # substring
-def substr(str, keyword):
-    a = str.index(keyword)
-    #still working on it
-    ##if a:
-        ##print(a)
-    ##else:
-        ##return -1
+def substr(str1, keyword):
+    length = len(keyword)
+    if keyword in str1:
+        for i in range(len(str1)):
+            if i+length <= len(str1):
+                if keyword in str1[i:i+length]:
+                    return i
+    else:
+        return -1
+print(substr("this is what I'm searching in", "searching"))
+print(substr("this is what I'm searching in", "not"))
 
