@@ -80,6 +80,24 @@ def pal(str):
 print(pal(""))
 
 # Palindrome searcher
+def palsearcher(str):
+    aset = set()
+    for i in range(3,len(str)+1):
+        for j in range(len(str)):
+            curpos = j
+            if curpos + i <= len(str):
+                newstr = str[curpos:curpos+i]
+                if newstr == newstr[::-1]:
+                    aset.add(newstr)
+            else:
+                newstr = str[curpos:]
+                if newstr == newstr[::-1] and len(newstr)>= 3:
+                    aset.add(newstr)
+    newlist = list(aset)
+    return newlist
+aa = 'dog goat dad duck doodle never'
+print(palsearcher(aa))
+    
 
 
 # sort
