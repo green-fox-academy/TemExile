@@ -43,4 +43,30 @@ print(quick_sort(d))
 
 # merge sort
 def merge_sort(str):
-    
+    if len(str) > 1:
+        stop = len(str)//2
+        left = str[:stop]
+        right = str[stop:]
+
+        merge_sort(left)
+        merge_sort(right)
+
+        i = j = k = 0
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                str[k] = left[i]
+                i += 1
+            else:
+                str[k] = right[j]
+                j += 1
+            k += 1
+        while i < len(left):
+            str[k] = left[i]
+            i += 1
+            k += 1
+        while j < len(right):
+            str[k] = right[j]
+            j += 1
+            k += 1
+    return str
+print(merge_sort(a))
