@@ -124,6 +124,23 @@ def rotate(m, cl = 'clockwise'):
 print(rotate(m1, 'anti'))
 print(rotate(m1, 'clockwise'))
 
+# rotation with multiplication of 90 degree
+def rotate_n(m, n = 0, cl = 'clockwise'):
+    re = n%4
+    a = m
+    if re == 0:
+        return a
+    else:
+        for i in range(1,re+1):
+            a = rotate(a)
+        return a
+print(rotate_n(m1, n = 3, cl = 'clockwise'))
+print(rotate_n(m1, n = 1, cl = 'anti'))
+
+
+
+
+
 
 
 
