@@ -75,8 +75,8 @@ def mul(m,n):
 print(mul(m1, m2))
 print(mul([[1,2,3],[3,2,1]],[[1,2],[3,4],[2,1]]))
 
-# vertical flipping
-def v_flip(m):
+# horizontal flipping
+def h_flip(m):
     if len(m)%2 == 0:
         a = len(m) // 2
         b = m[:a]
@@ -87,18 +87,18 @@ def v_flip(m):
         b = m[:a]
         c = m[a+1:]
         return c+[m[a]]+b
-print(v_flip(m5))
-print(v_flip(m6))
+print(h_flip(m5))
+print(h_flip(m6))
 
-# horizontal flipping
-def h_flip(m):
+# vertical flipping
+def v_flip(m):
     a = []
     for i in range(len(m)):
         b = m[i]
         c = b[::-1]
         a.append(c)
     return a
-print(h_flip(m5))
+print(v_flip(m5))
 
 # main anti-diagonal mirroring
 def anti_dia(m):
@@ -106,20 +106,20 @@ def anti_dia(m):
         return "This mattrix is not a square matrix"
     else:
         a = transp(m)
-        b = v_flip(a)
-        c = h_flip(b)
+        b = h_flip(a)
+        c = v_flip(b)
         return c
-print(anti_dia(m1))
+print(anti_ia(m1))
 
 # matrix rotation
 def rotate(m, cl = 'clockwise'):
     if cl == 'clockwise':
         a = transp(m)
-        b = v_flip(a)
+        b = h_flip(a)
         return b
     elif cl == 'anti':
         a = transp(m)
-        b = h_flip(a)
+        b = v_flip(a)
         return b
 print(rotate(m1, 'anti'))
 print(rotate(m1, 'clockwise'))
@@ -136,9 +136,6 @@ def rotate_n(m, n = 0, cl = 'clockwise'):
         return a
 print(rotate_n(m1, n = 3, cl = 'clockwise'))
 print(rotate_n(m1, n = 1, cl = 'anti'))
-
-
-
 
 
 
