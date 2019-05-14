@@ -5,3 +5,11 @@ try:
         print(line)
 except:
     print('Unable to the file: my-file.txt')
+
+# count the lines
+try:
+    textt = open('my-file.txt', 'r')
+    alline = text1.readlines()
+    return len(alline)
+except:
+    return 0
