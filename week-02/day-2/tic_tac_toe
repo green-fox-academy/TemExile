@@ -1,0 +1,13 @@
+def tic_tac_result(file):
+    a = open(file, 'r')
+    b = a.readlines()
+    a.close()
+    if b[0][0] == b[1][0] == b[2][0] == 'O' or b[0][1] == b[1][1] == b[2][1] == 'O' or b[0][2] == b[1][2] == b[2][2] == 'O' or b[0] == b[1] == b[2] == 'O' or b[0][0] == b[1][1] == b[2][2] == 'O':
+        return f'O'
+    elif b[0][0] == b[1][0] == b[2][0] == 'X' or b[0][1] == b[1][1] == b[2][1] == 'X' or b[0][2] == b[1][2] == b[2][2] == 'X' or b[0] == b[1] == b[2] == 'X' or b[0][0] == b[1][1] == b[2][2] == 'X':
+        return f'X'
+    else:
+        return f'draw'
+
+
+print(tic_tac_result('draw.txt'))
