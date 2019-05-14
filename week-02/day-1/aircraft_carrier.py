@@ -10,9 +10,12 @@ class aircraft(object):
         self.amno = 0
         return total_damage
     def refill(self,amno_storage):
-        amno_storage -= self.max_amno
-        self.amno = self.max_amno
-        return amno_storage
+        if amno_storage >= self.max_amno:
+            amno_storage -= self.max_amno
+            self.amno = self.max_amno
+        else:
+            self.amno += amno_storage
+            amno_storage = 0
     def getType(self):
         return f'{self.type}'
     def getStatus(self):
@@ -29,3 +32,28 @@ air1.refill(500)
 print(air1.refill(500))
 print(air1.getStatus())
 
+class carrier(object):
+    def __init__(self, amno_storage, hp):
+        self.aircrafts = []
+        self.amno = amno_storage
+        self.hp = hp
+    def add(self, aircraft):
+        self.aircrafts.append(aircraft)
+    def fill(self):
+        if self.amno == 0:
+            print('There is no amno to fill.')
+        else:
+            i = j = 0
+            while self.aircrafts[i].amno == 0 and self.aircrafts[i].priority == True and self.amno != 0:
+                self.aircrafts[i].refill(self.amno)
+                i += 1
+            while self.aircrafts[j].amno == 0 and self.amno != 0:
+                self.aircrafts[i].refill(self.amno)
+                j += 1
+    def fight(self, otherCarrier):
+        damage = 0
+        for i in range(len(self.aircrafts)):
+            damage += self.aircrafts[i].fight()
+            otherCarrier.hp -= damage
+    def getStatus(self):
+        
