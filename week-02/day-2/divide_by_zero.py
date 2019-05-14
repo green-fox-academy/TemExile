@@ -1,5 +1,6 @@
-try:
-    p = int(input('please enter a number'))
-    print(10/p)
-except:
-    print('fail')
+def dividezero(number):
+    try:
+        print(10/number)
+    except:
+        print('fail')
+dividezero(4)
