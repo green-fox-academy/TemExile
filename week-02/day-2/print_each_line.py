@@ -7,9 +7,12 @@ except:
     print('Unable to the file: my-file.txt')
 
 # count the lines
-try:
-    textt = open('my-file.txt', 'r')
-    alline = text1.readlines()
-    return len(alline)
-except:
-    return 0
+def countline(filename):
+    try:
+        textt = open(filename, 'r')
+        alline = text1.readlines()
+        return len(alline)
+    except:
+        return 0
+
+countline('my-file.txt')
