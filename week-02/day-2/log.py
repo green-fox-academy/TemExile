@@ -2,6 +2,7 @@ import re
 def findIP(file):
     a = open(file, 'r')
     b = a.readlines()
+    a.close()
     c = []
     paten = re.compile('\d\d\.\d\d\.\d\d\.\d\d')
     for i in range(len(b)):
