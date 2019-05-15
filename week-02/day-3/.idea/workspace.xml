@@ -11,10 +11,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Election.py">
+        <entry file="file://$PROJECT_DIR$/FindComment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            <state relative-caret-position="343">
+              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -38,6 +38,7 @@
         <option value="$PROJECT_DIR$/fileWorkshop.py" />
         <option value="$PROJECT_DIR$/FindOldest.py" />
         <option value="$PROJECT_DIR$/Election.py" />
+        <option value="$PROJECT_DIR$/FindComment.py" />
       </list>
     </option>
   </component>
@@ -84,7 +85,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Election">
+  <component name="RunManager" selected="Python.FindComment">
     <configuration name="Election" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="day-3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -98,6 +99,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Election.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FindComment" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="day-3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FindComment.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -150,6 +172,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.FindComment" />
         <item itemvalue="Python.Election" />
         <item itemvalue="Python.FindOldest" />
         <item itemvalue="Python.fileWorkshop" />
@@ -212,8 +235,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Election.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="324">
           <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FindComment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
         </state>
       </provider>
     </entry>
