@@ -2,6 +2,7 @@
 def findoldest(file):
     a = open(file, 'r')
     b = a.readlines()
+    a.close()
     c = []
     for line in b:
         d = line.split(';')
