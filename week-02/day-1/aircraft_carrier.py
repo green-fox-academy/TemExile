@@ -56,4 +56,14 @@ class carrier(object):
             damage += self.aircrafts[i].fight()
             otherCarrier.hp -= damage
     def getStatus(self):
-        
+        if self.hp == 0:
+            print('It\'s dead Jim \:\(')
+        else:
+            dmg = 0
+            for k in range(len(self.aircrafts)):
+                dmg += (self.aircrafts[k].base_damage * self.aircrafts[k].amno)
+            print(f'HP: {self.hp}, Aircraft count: {len(self.aircraft)}, \
+            Amno Storage: {self.amno}, Total damage: {dmg}')
+            print(f'Aircrafts:')
+            for aircraft in self.aircrafts:
+                print(aircraft.getStatus())
