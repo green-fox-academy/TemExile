@@ -10,12 +10,16 @@ def initialize_dominoes():
     return dominoes
 dominoes = initialize_dominoes()
 print(dominoes)
-
-a = []
-for i in range(len(dominoes)):
-    b = []
-    c = dominoes
-    b.append(c[i])
-    c.pop(i)
-    for j in range(len(c)):
-        if b[j][1] == c[]
+list_1 = list(map(lambda x: x, dominoes))
+print(list_1)
+print(type(list_1[0]))
+a = [list_1[0]]
+j = 0
+while j < len(list_1) - 1:
+        for i in range(len(list_1)):
+                cc = a[-1].values[1]
+                bb = list_1[i].values[0]
+                if cc == bb:
+                        a.append(list_1[i])
+                        j += 1
+print(a)

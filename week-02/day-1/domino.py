@@ -3,3 +3,5 @@ class Domino(object):
         self.values = [value_a, value_b]
     def __repr__(self):
         return '[{}, {}]'.format(self.values[0], self.values[1])
+
+print(Domino(1,2))
