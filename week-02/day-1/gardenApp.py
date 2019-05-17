@@ -55,9 +55,14 @@ tree2 = tree('orange Tree', 9)
 plant = [flower1, flower2, tree1, tree2]
 
 garden1 = garden(list = plant)
+print('\n')
 garden1.check()
+print('\n')
 garden1.water(40)
+print('\n')
 garden1.check()
+print('\n')
 garden1.water(70)
+print('\n')
 garden1.check()
 
