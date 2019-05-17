@@ -45,6 +45,5 @@ class ship:
         return ""
     def __str__(self):
         alivepirateCount = self.count_alive()
-        return f'The captain consumed {self.captain.alcohol} rum and he is {self.captain.sleep} ' \
-            f'passed out and {self.captain.alive} died. And the ship has {alivepirateCount} pirates'
-'
+        return f'The captain consumed {self.captain.alcohol} rum and he is {self.captain.sleep} '\
+        f'passed out and {self.captain.alive} died. And the ship has {alivepirateCount} pirates'
