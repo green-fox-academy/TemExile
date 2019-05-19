@@ -17,4 +17,3 @@ for line in use_list:
 people_count = {}
 for key in date_name_time.keys():
     people_count[key] = len(date_name_time[key])
-print(people_count)
