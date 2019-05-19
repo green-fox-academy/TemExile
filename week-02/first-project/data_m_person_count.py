@@ -54,6 +54,7 @@ for line in use_list:
             enter_log[name][date].append(enter_record)
         else:
             enter_log[name][date] = [enter_record]
+
 enter_time = {}
 for name in enter_log.keys():
     for date in enter_log[name].keys():
@@ -61,6 +62,7 @@ for name in enter_log.keys():
             enter_time[name].append(enter_log[name][date][0][0])
         else:
             enter_time[name] = [enter_log[name][date][0][0]]
+
 log_day_count = {}
 for key in enter_time:
     log_day_count[key] = len(enter_log[key])
@@ -76,3 +78,5 @@ for name in main_door_log.keys():
 day_counts = {}
 for key in main_door_time:
     day_counts[key] = len(main_door_log[key])
+
+
