@@ -10,7 +10,8 @@ class patient(object):
             self.severity = 0
 
 class queue(object):
-    def __init__(self):
+    def __init__(self, q_type):
+        self.q_type = q_type
         self.queuelist = []
     def add(self, newpatient):
-        
+        self.queuelist.append(newpatient)
