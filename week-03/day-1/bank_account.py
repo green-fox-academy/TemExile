@@ -1,13 +1,19 @@
-class USADollar(object):
+class currency(object):
+    def __init__(self, code, centralBank, value):
+        self.code = code
+        self.centralBank = centralBank
+        self.value = value
+
+class USADollar(currency):
     def __init__(self, value):
         self.code = 'USA'
         self.centralBank = 'Federal Reserve System'
-        self.value = value
-class HungarianForint(object):
+        super().__init__()
+class HungarianForint(currency):
     def __init__(self, value):
         self.code = 'HUF'
         self.centralBank = 'Hungarian National Bank'
-        self.value = value
+        super().__init__()
 
 class bankAccount(object):
     def __init__(self, pin, curr):
@@ -40,7 +46,3 @@ class bank(object):
             value = account.curr.value
             totalamount += value
         return totalamount
-        
-
-
-
