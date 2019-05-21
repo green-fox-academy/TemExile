@@ -1,0 +1,3 @@
+class Apple (object):
+    def get_apple(self):
+        return f'apple'
