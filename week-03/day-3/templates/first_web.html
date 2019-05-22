@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>first_web</title>
+    <style>
+        .font{
+            color: rgb(168, 8, 168);
+            margin-right: 40px;
+        }
+    </style>
+</head>
+<body style="background:url({{url_for('static', filename = 'topography.png')}});">
+    <div style="background-color:rgb(77, 75, 75);
+    background-image:url({{url_for('static', filename = 'aperture.svg')}}); background-repeat: no-repeat;
+    background-position:100px;">
+    <b class="font">
+        <p style="text-align:right;"><a href="https://www.google.com" class="font">HOME</a>
+        <a href="https://www.google.com" class="font">WIKI</a>
+        <a href="https://www.google.com" class="font">GITHUB</a>
+        <a href="https://www.google.com" class="font">LINKEDIN</a></p>
+    </b>
+    </div>
+    <div">
+        <b><p style="font-size: 50px; font-family:'Courier New', Courier, monospace;
+        margin-left:100px; margin-top: 100px;
+        margin-bottom: 20px;">Tony Stark</p></b>
+        <p style="font-size: 40px; font-family:'Courier New', Courier, monospace;
+        margin-left: 100px; margin-top:0px;color:rgb(255, 78, 255);">Fullstack software developer</p>
+        <p style="font-size: 26px; margin-left: 100px; margin-bottom: 20px;">I love to design complex systems wiht high levels 
+            of automation including AI and robotics. I'm deeply interested in inventing new things
+            that can augment the human experience.</p>
+        <p style="font-size: 26px; margin-left: 100px; margin-bottom:5px;">Everything I've done, everthing I'll do today,
+            everything I'll ever do, I do to protect this world. Someone once told me that with great power comes great responsiblity.
+        </p>
+        <p style="text-align:center; font-size:50px; margin-bottom: 50px; 
+        color: rgb(112, 110, 110)">. . .</p>
+        <p style="text-align:center; font-size:50px;">Technology Wiki</p>
+        <p style="margin-left:100px;font-size: 26px; margin-bottom:20px;">Instruction Set</p>
+        <p style="font-size: 20px; margin-left: 100px; margin-bottom: 5px;">All computers run using very low-level commands which do some very basic functions, such as 
+            reading data, writting data, jumping to addresses, and calculating basic arithmetic.(The
+            complete list of commands that can be run by a CPU is known as that
+        </p>
+    </div>
+</body>
+</html>
