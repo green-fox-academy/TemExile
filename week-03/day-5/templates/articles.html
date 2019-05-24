@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>articles</title>
+</head>
+<body>
+
+    {% for item in articles %}
+        {% if item['seen'] | length == 0 %}
+            <p>{{item['content']}}</p>
+            <p>No on has seen this article before.</p>
+        {% else %}
+            <p>{{item['content']}}</p>
+            <p>Seen by {{item['seen']|join(', ')}}.</p>
+        {% endif %}
+    {% endfor %}
+
+    
+</body>
+</html>
