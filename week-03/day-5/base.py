@@ -55,5 +55,28 @@ def list_articles():
     }]
     return render_template("articles.html", articles=articles)
 
+@app.route('/posts')
+def post():
+    transformed_post = [
+    {
+        "id": "200",
+        "author": "John",
+        "content": "Difficulty on insensible reasonable in. From as went he they.",
+        "Liked":["John", "Jane"]
+    },
+    {
+        "id": "201",
+        "author": "John",
+        "content": "Preference themselves me as thoroughly partiality considered on in estimating.",
+        "Liked":[]
+    },
+    {
+        "id": "202",
+        "author": "Jane",
+        "content": "In as name to here them deny wise this. As rapid woody my he me which.",
+        "Liked":["John"]
+    }]
+    return render_template('posts.html', posts = transformed_post)
+
 if __name__ == '__main__':
     app.run(debug=True)
