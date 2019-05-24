@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posts</title>
+</head>
+<body>
+    <article>
+        {% for l1 in posts %}
+            <h1 id = {{l1.id}}>{{l1["author"]~"#"~l1["id"]}} <a href = {{l1.id}}>¶</a></h1>
+            <p>{{l1.content}}</p>
+            {% if l1.Liked|length != 0%}
+                <p>Liked by {{l1['Liked']|join(', ')}}</p>
+            {% endif %} 
+        {% endfor %}
+    </article>
+    
+</body>
+</html>
