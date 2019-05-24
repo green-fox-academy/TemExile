@@ -6,12 +6,14 @@
 </head>
 <header style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
 font-size: 50px; text-align: center;">
-    <p>List</p>
+    <p>Movie List</p>
 </header>
 <body style="text-align: center;">
     <a href="/add-movie"><input type="button" value="Add Moive"></a>
     <h1 style="font-family: 'Courier New', Courier, monospace; font-size: 20px;">
-        <p style="margin-bottom: 20px;"><a href="/edit/1">Title 1</a></p>
+        {% for l in movielist%}
+        <p style="margin-bottom: 20px;"><a href="/edit/{{l.id}}">{{l['title']}}</a></p>
+        {% endfor %}
     </h1>
 </body>
 </html>
