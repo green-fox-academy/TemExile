@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Movie</title>
+    <style>
+        .searchbox{
+            border: 5px black solid;
+            margin-right: 300px;
+            margin-left: 300px;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<header style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+font-size: 50px; text-align: center;">
+    <p>Please Fill the Information</p>
+</header>
+<body>
+    <div class="searchbox">
+        <form action = "/api/movies" method="POST">
+        <p>Title: <input name="title" type="text"></p>
+        <p>Year: <input name="year" type="text"></p>
+        <p>Genre: <input name="genre" type="text"></p>
+        <p>Description: <input name="description" type="text"></p>
+        <p>Your Access Code: <input name="code" type="text"></p>
+        <input  type="submit" value="Add">
+        </form>
+    </div>
+</body>
+</html>
