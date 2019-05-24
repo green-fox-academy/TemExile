@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/product')
 def show_table():
     products = [
     ("Milk", 3.59123),

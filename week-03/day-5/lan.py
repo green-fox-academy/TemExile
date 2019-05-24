@@ -3,7 +3,7 @@ import random
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/greeting_2')
 def load_language():
     with open('lan.txt', encoding = 'UTF-8', mode = 'r') as infile:
         greet = infile.readlines()
