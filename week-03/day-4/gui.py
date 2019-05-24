@@ -63,16 +63,13 @@ def change(movie_id):
         resp = make_response(response, 404)
         for l in a:
             if newmovie['id'] == l["id"]:
-                l["title"] = newmovie["title"]
-                l["year"] = newmovie["year"]
-                l["genre"] = newmovie["genre"]
-                l["description"] = newmovie["description"]
-                with open('movie.json', 'w') as infile:
-                    json.dumps(a, infile)
+                x = a.index(l)
+                a.pop(x)
+                a.insert(x, newmovie)
+                with open('gui.json', 'w') as infile:
+                    json.dump(a, infile)
                 response = jsonify(Result = "Request completed")
                 resp = make_response(response, 200)
-            else:
-                pass
         return resp
     else:
         response = jsonify(error = 'Invalid Access Code')
