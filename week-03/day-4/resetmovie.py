@@ -22,7 +22,7 @@ def api_get_movie(movie_id):
 @app.route('/api/movie', methods = ['POST'])
 def api_post_movie():
     api_key = '123'
-    moviedic = jsonify(ID = '5', title = 'new movie', content = 'new content')
+    # moviedic = jsonify(ID = '5', title = 'new movie', content = 'new content')
     # body = request.get_json()
     if request.headers['api_key'] == api_key:
         # with open('movie.json', 'r') as infile:
