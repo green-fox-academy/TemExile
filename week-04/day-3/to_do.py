@@ -13,7 +13,6 @@ list_query = 'SELECT * FROM todotask'
 add_query = 'INSERT INTO todotask (task) VALUES (%s)'
 remove_query = 'DELETE FROM todotask WHERE listnumber = %s'
 
-
 if sys.argv[1] == '-l':
     cursor.execute(list_query)
     ab = cursor.fetchall()
@@ -42,3 +41,5 @@ elif sys.argv[1] == '-r':
         cursor.execute(remove_query, (rid,))
         connection.commit()
 
+cursor.close()
+connection.close()
