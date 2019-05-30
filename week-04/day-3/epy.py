@@ -59,7 +59,8 @@ connection = psycopg2.connect(
     password = 'wengleo'
 )
 cursor = connection.cursor()
-insert_dat = 'INSERT INTO employee_day_3 (first_name, last_name, gender, age, salary) VALUES(%s, %s, %s, %s, %s)'
+insert_dat = ('INSERT INTO employee_day_3'+
+             ' (first_name, last_name, gender, age, salary) VALUES(%s, %s, %s, %s, %s)')
 for i in full_data:
     cursor.execute(insert_dat, i)
     connection.commit()
