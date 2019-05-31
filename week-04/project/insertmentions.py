@@ -15,7 +15,8 @@ def add_to_mention(rawdata):
         password = 'wengleo'
     )
     cursor = connection.cursor()
-    insert_code = 'INSERT INTO mentions (message_id, user_id) VALUES (%s, %s)'
+    insert_code = ('INSERT INTO mentions \
+                    (message_id, user_id) VALUES (%s, %s)')
     for recordlist in insert_list:
         cursor.execute(insert_code, recordlist)
         connection.commit()
