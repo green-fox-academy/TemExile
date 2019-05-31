@@ -5,11 +5,12 @@ import insertmentions
 import insertuser
 import insertreaction
 
-with open('gfa-team-thanks.json', encoding = 'UTF-8', mode = 'r') as jinfile:
+with open('gfa-team-thanks.json', 
+            encoding = 'UTF-8', mode = 'r') as jinfile:
     raw_data = json.load(jinfile)
 
 # remove the record that is a file_comment
-raw_data.pop(599)
+# raw_data.pop(599)
 
 insertmessage.add_to_message(raw_data)
 insertuser.add_to_users(raw_data)
