@@ -46,12 +46,13 @@ FROM reactions
 GROUP BY user_id
 ORDER BY reactions DESC limit 10;
 
-
+-- average message sent
 SELECT avg(messages)
 FROM (SELECT user_id, count(id) as messages
         FROM messages
         GROUP BY user_id) as table1;
 
+-- average emoji was used
 SELECT avg(reactions)
 FROM (SELECT user_id, count(id) as reactions
         FROM reactions
