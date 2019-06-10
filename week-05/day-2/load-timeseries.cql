@@ -1,4 +1,4 @@
-/*
+cc6/*
 Declares the keyspace to use:
 */
 USE isd_weather_data;
