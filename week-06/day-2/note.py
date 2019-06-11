@@ -44,4 +44,4 @@ page = requests.get("https://blog.hartleybrody.com/web-scraping/")
 
 soup = BeautifulSoup(page.content, 'html.parser')
 
-soup.find_all('div', class='post-callout')
+# soup.find_all('div', class='post-callout')
