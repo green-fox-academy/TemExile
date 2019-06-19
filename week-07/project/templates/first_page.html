@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+    <div>
+        <p>Please Fill the Info of Your Property</p>
+        <form action="/quote" method="POST">
+            <p>Number of Bedroom <input type="text" name="Bedroom"></p>
+            <p>Holding Type <select type="text" name = "HoldType">
+                <option>Freehold</option>
+                <option>Leasehold</option>
+            </select></p>
+            <p>Property Type <select type="text" name = "HomeType">
+                <option>Flat</option>
+                <option>Terraced</option>
+                <option>Semi-Detached</option>
+                <option>Detached</option>
+            </select></p>
+            <p>New Building <select type="text" name = "NewBuilding">
+                <option>Yes</option>
+                <option>No</option>
+            </select></p>
+            <p>Postcode <input type="text" name="postcode"></p>
+            <input type="submit" value="Get Estimated Price">
+        </form>
+    </div>
+</body>
+</html>
