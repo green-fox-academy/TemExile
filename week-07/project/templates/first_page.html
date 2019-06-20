@@ -16,14 +16,20 @@
         .inputbox {
         height: 30px;
         width: 200px;
-        font-size: 20px;
-        border-radius: 10px;
+        font-size: 20px;   
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        padding: 5px;
         }
         .selectbox {
-        height: 36px;
-        width: 204px;
-        font-size: 20px;
-        border-radius: 10px;
+        height: 40px;
+        width: 210px;
+        font-size: 20px;    
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        padding: 5px;
         }
         .inputtext{
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -39,6 +45,16 @@
         .backimage{
             background-image: url("../static/background.jpg");
             background-size: cover;
+        }
+        .summit {
+        height: 60px;
+        background-color: #ffffff55;
+        color: #fff;
+        line-height: 35px;
+        width: 280px;
+        border: none;
+        font-size: 20px;
+        border-radius: 10px;
         }
     </style>
 </head>
@@ -62,7 +78,7 @@
                 <option>No</option>
             </select></div>
             <div class="inputtext"><span class="textwidth">Postcode</span> <input type="text" name="postcode" class="inputbox"></div>
-            <input type="submit" value="Get Estimated Price" class="inputbox">
+            <input type="submit" value="Get Estimated Price" class="summit">
         </form>
     </div>
 </body>
