@@ -3,28 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
+    <style>
+        .box{
+        text-align: center;
+        margin-top: 150px;}
+        .title{
+        font-family: cursive;
+        font-size: 50px;
+        font-weight: bolder;
+        font-style: italic;
+        }
+        .inputbox {
+        height: 30px;
+        width: 200px;
+        font-size: 20px;
+        border-radius: 10px;
+        }
+        .selectbox {
+        height: 36px;
+        width: 204px;
+        font-size: 20px;
+        border-radius: 10px;
+        }
+        .inputtext{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 25px;
+        margin-top: 20px;
+        margin-bottom:20px;
+        color:blanchedalmond;
+        }
+        .textwidth{
+            width: 300px;
+            display: inline-block
+        }
+        .backimage{
+            background-image: url("../static/background.jpg");
+            background-size: cover;
+        }
+    </style>
 </head>
-<body>
-    <div>
-        <p>Please Fill the Info of Your Property</p>
+<body class="backimage">
+    <div class="box">
+        <p class="title" style="color:blanchedalmond;">Please Fill the Info of Your Property</p>
         <form action="/quote" method="POST">
-            <p>Number of Bedroom <input type="text" name="Bedroom"></p>
-            <p>Holding Type <select type="text" name = "HoldType">
+            <div class="inputtext"><span class="textwidth">Number of Bedroom</span><input type="text" name="Bedroom" class="inputbox"></div>
+            <div class="inputtext"><span class="textwidth">Holding Type</span><select type="text" name = "HoldType" class="selectbox">
                 <option>Freehold</option>
                 <option>Leasehold</option>
-            </select></p>
-            <p>Property Type <select type="text" name = "HomeType">
+            </select></div>
+            <div class="inputtext"><span class="textwidth">Property Type</span> <select type="text" name = "HomeType" class="selectbox">
                 <option>Flat</option>
                 <option>Terraced</option>
                 <option>Semi-Detached</option>
                 <option>Detached</option>
-            </select></p>
-            <p>New Building <select type="text" name = "NewBuilding">
+            </select></div>
+            <div class="inputtext"><span class="textwidth">New Building</span> <select type="text" name = "NewBuilding" class="selectbox">
                 <option>Yes</option>
                 <option>No</option>
-            </select></p>
-            <p>Postcode <input type="text" name="postcode"></p>
-            <input type="submit" value="Get Estimated Price">
+            </select></div>
+            <div class="inputtext"><span class="textwidth">Postcode</span> <input type="text" name="postcode" class="inputbox"></div>
+            <input type="submit" value="Get Estimated Price" class="inputbox">
         </form>
     </div>
 </body>
