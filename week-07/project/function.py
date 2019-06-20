@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np 
 import math
 from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import GradientBoostingRegressor as gbr
 
 def get_info(item):
     a = list(item)
@@ -73,3 +74,16 @@ def get_loc(postcode):
     long = float(df.loc[df['postcode'] == postcode, 'longitude'])
     return lat, long
 
+def gbr_model():
+    df = pd.read_csv('newdata.csv', index_col = 0)
+    x_value = df.drop('Price', axis = 1)
+    y_value = df['Price'].apply(math.log)
+    lower = 0.1
+    upper = 0.9
+    l_model = gbr(loss = 'quantile', alpha = lower)
+    u_model = gbr(loss = 'quantile', alpha = upper)
+    pre_model = gbr(loss = 'ls')
+    l_model.fit(x_value, y_value)
+    u_model.fit(x_value, y_value)
+    pre_model.fit(x_value, y_value)
+    return l_model, u_model, pre_model
